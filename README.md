@@ -115,12 +115,16 @@ user.changed?
 ```
 
 Query หาข้อมูลที่ต้องการจาก Database โดยที่ข้อมูลที่ได้มาจะเป็น Array สิ่งที่หาจะเป็น Case sensitive เท่านั้น
-ต่อให้ดึงค่าออกมาแล้วไม่เจอก็จะยังได้อยู่ดีแต่ว่าเป็น .count เท่ากับ 0
+ต่อให้ดึงค่าออกมาแล้วไม่เจอก็จะยังได้อยู่ดีแต่ว่าเป็น .count เท่ากับ 0 ฉะนั้นถ้าอยากเอาค่าข้างในออกมาใช้งานจะต้องใช้ users[index] ออกมาใช้งาน
 ```
 User.where()
 ```
 
-
+ทุกๆ Active Record Object นั้นเป็น Serializable Object ทำให้เราสามารถแปลงค่าเป็น json ได้
+ทันทีด้วย .as_json ซึ่งจะออกมาเป็น Ruby Hash แต่ถ้าอยากได้ JSON String ให้ใช้ .to_json
+```
+users.as_json
+```
 
 * System dependencies
 
