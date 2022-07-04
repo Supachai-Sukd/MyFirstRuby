@@ -5,7 +5,23 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby Create project
+```
+rails new project2 --api --database=sqlite3 --skip-bundle
+```
+
+สร้าง Gemset
+```
+echo 'ror-project2' > .ruby-gemset
+```
+
+ออกจาก folder project2 และกลับเข้าไปใหม่อีกที
+```
+cd..
+cd project2
+```
+
+
 
 * CLI
 
